@@ -1,4 +1,4 @@
-ping-update-delay: 5
+update-delay: 5
 show-display-name: false
 show-ping-brackets: true
 brackets-left: '&7['
