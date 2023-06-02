@@ -1,0 +1,14 @@
+name: PingTabList
+version: '1.2'
+main: com.diabloiiiros.PingTabList.Main
+api-version: 1.17
+authors: [diabloIIIROS]
+description: Shows all players ping numbers in the tab list
+permissions:
+  pingtl.reload:
+    default: false
+    description: Permission to reload the config.yml
+commands:
+  pingtl:
+    description: Reload command for config.yml
+    usage: /<command>

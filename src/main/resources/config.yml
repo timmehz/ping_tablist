@@ -1,0 +1,67 @@
+update-delay: 5
+show-display-name: false
+show-ping-brackets: true
+brackets-left: '&7['
+brackets-right: '&7]'
+ping-position: 'behind'
+green-ping-max: 150
+yellow-ping-max: 220
+green-color-ping: 'GREEN'
+yellow-color-ping: 'YELLOW'
+red-color-ping: 'RED'
+no-permission: '&cYou do not have permission to use this command.'
+
+# SUPPORT:
+  # Discord: https://discord.gg/Em9EwyKxzq
+
+# ping-update-delay : in real life seconds
+
+# show-display-name : {
+  #  - if true : the plugin will use the username that you would see in chat or/and above your minecraft character model
+  #  - if false : the plugin will use the username of your minecraft account (this is recommended option)
+# }
+
+# show-ping-brackets : {
+  #  - if true : the plugin would enable the showing of what ever is in these values of 'brackets-left' , 'brackets-right'
+  #  - if false : the plugin would disable the showing of what ever is in these values of 'brackets-left' , 'brackets-right'
+# }
+
+# ping-position : {
+  #  - if 'behind' : the ping number and brackets would be displayed after the player's name
+  #  - if 'front' : the ping number and brackets would be displayed before the player's name
+# }
+
+# green-ping-max , yellow-ping-max : {
+  #  - maximum number of ping amount for green ping color and yellow ping color
+  #  - minimum number for green ping is -<max number for Minecraft>
+  #  - minimum number for yellow ping is +1 to green-ping-max
+  #  - minimum number for red ping is +1 to yellow-ping-max
+  #  - maximum number for red ping is <max number for Minecraft>
+# }
+
+# Get Minecraft color codes: https://htmlcolorcodes.com/minecraft-color-codes/
+# green-color-ping , yellow-color-ping , red-color-ping  colors list, ONLY supports 1 color :
+  # RED
+  # RESET
+  # GREEN
+  # YELLOW
+  # DARK_PURPLE
+  # GOLD
+  # GRAY
+  # DARK_GREEN
+  # DARK_AQUA
+  # AQUA
+  # BLACK
+  # ITALIC
+  # DARK_RED
+  # BLUE
+  # BOLD
+  # DARK_BLUE
+  # DARK_GRAY
+  # LIGHT_PURPLE
+  # MAGIC
+  # STRIKETHROUGH
+  # UNDERLINE
+  # WHITE
+
+# no-permission : sends the message if the player that is doing '/pingtl reload' does not have permission to preform the command
