@@ -9,4 +9,5 @@ Minecraft Java Plugin coded in 1.17, supports 1.17+ using Spigot API
 
 # Creator
   - timmehz  /  diabloIIIROS
+
 Copyright (c) 2023 diabloIIIROS
