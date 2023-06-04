@@ -7,6 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PingtlCommand implements CommandExecutor, TabCompleter {
+    /*
+        ** Do NOT Delete this comment, you have to include this notice in all files **
+        Copyright (c) diabloIIIROS / timmehz 2023
+        All original code is under copyright under diabloIIIROS / timmehz
+        For more information visit: https://github.com/timmehz/ping_tablist/blob/main/README.md section License
+    */
     private final Main pl;
     public PingtlCommand(Main pl) { this.pl = pl; }
     @Override
@@ -17,9 +23,13 @@ public class PingtlCommand implements CommandExecutor, TabCompleter {
                     if (sender.hasPermission("pingtl.reload")) {
                         pl.reloadConfig();
                         pl.saveDefaultConfig();
-                        sender.sendMessage(ChatColor.GREEN + "config.yml have been reloaded");
+                        if (pl.getConfig().getString("config-reloaded", "config.yml have been reloaded").contains("&")) {
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', pl.getConfig().getString("config-reloaded", "config.yml have been reloaded")));
+                        } else {
+                            sender.sendMessage(pl.getConfig().getString("config-reloaded", "config.yml have been reloaded"));
+                        }
                     } else if (!sender.hasPermission("pingtl.reload")) {
-                        if (pl.getConfig().getString("no-permission", "&cYou do not have permission to use this command.").contains("&")) {
+                        if (pl.getConfig().getString("no-permission", "You do not have permission to use this command.").contains("&")) {
                             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', pl.getConfig().getString("no-permission", "You do not have permission to use this command.")));
                         } else {
                             sender.sendMessage(pl.getConfig().getString("no-permission", "You do not have permission to use this command."));
@@ -28,15 +38,31 @@ public class PingtlCommand implements CommandExecutor, TabCompleter {
                 } else if (sender instanceof ConsoleCommandSender) {
                     pl.reloadConfig();
                     pl.saveDefaultConfig();
-                    pl.console.warning("config.yml have been reloaded");
+                    if (pl.getConfig().getString("config-reloaded", "config.yml have been reloaded").contains("&")) {
+                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', pl.getConfig().getString("config-reloaded", "config.yml have been reloaded")));
+                    } else {
+                        sender.sendMessage(pl.getConfig().getString("config-reloaded", "config.yml have been reloaded"));
+                    }
                 }
             } else {
-                sender.sendMessage(ChatColor.RED + "invalid argument : '" + args[0] + "'");
+                if (pl.getConfig().getString("invalid-arg", "invalid argument : '" + args[0] + "'").contains("&")) {
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', pl.getConfig().getString("invalid-arg", "invalid argument : '" + args[0] + "'").replace("%arg%", args[0])));
+                } else {
+                    sender.sendMessage(pl.getConfig().getString("invalid-arg", "invalid argument : '" + args[0] + "'").replace("%arg%", args[0]));
+                }
             }
         } else if (args.length < 1) {
-            sender.sendMessage(ChatColor.RED + "Not enough arguments has been entered");
+            if (pl.getConfig().getString("not-enough-args", "Not enough arguments has been entered").contains("&")) {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', pl.getConfig().getString("not-enough-args", "Not enough arguments has been entered")));
+            } else {
+                sender.sendMessage(pl.getConfig().getString("not-enough-args", "Not enough arguments has been entered"));
+            }
         } else if (args.length > 1) {
-            sender.sendMessage(ChatColor.RED + "To many arguments has been entered");
+            if (pl.getConfig().getString("to-many-args", "To many arguments has been entered").contains("&")) {
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', pl.getConfig().getString("to-many-args", "To many arguments has been entered")));
+            } else {
+                sender.sendMessage(pl.getConfig().getString("to-many-args", "To many arguments has been entered"));
+            }
         }
         return true;
     }

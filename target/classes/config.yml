@@ -1,18 +1,26 @@
+fully-loaded-message: 'Ping Tab List has been fully loaded!'
 update-delay: 5
 show-display-name: false
 show-ping-brackets: true
 brackets-left: '&7['
 brackets-right: '&7]'
 ping-position: 'behind'
+ping-position-error: 'Invalid value for "ping-position" in config.yml'
 green-ping-max: 150
 yellow-ping-max: 220
 green-color-ping: 'GREEN'
 yellow-color-ping: 'YELLOW'
 red-color-ping: 'RED'
+to-many-args: '&cTo many arguments has been entered'
+not-enough-args: '&cNot enough arguments has been entered'
+invalid-arg: '&cinvalid argument : %arg%'
 no-permission: '&cYou do not have permission to use this command.'
+config-reloaded: '&aconfig.yml have been reloaded'
 
 # SUPPORT:
   # Discord: https://discord.gg/Em9EwyKxzq
+
+# fully-loaded-message : sends a message to the console when the plugin becomes fully loaded, does not support color codes
 
 # ping-update-delay : in real life seconds
 
@@ -30,6 +38,8 @@ no-permission: '&cYou do not have permission to use this command.'
   #  - if 'behind' : the ping number and brackets would be displayed after the player's name
   #  - if 'front' : the ping number and brackets would be displayed before the player's name
 # }
+
+# ping-position-error : a message that gets sent to the console when you have entered a wrong ping position into ping-position, does not support color codes
 
 # green-ping-max , yellow-ping-max : {
   #  - maximum number of ping amount for green ping color and yellow ping color
@@ -64,4 +74,12 @@ no-permission: '&cYou do not have permission to use this command.'
   # UNDERLINE
   # WHITE
 
-# no-permission : sends the message if the player that is doing '/pingtl reload' does not have permission to preform the command
+# to-many-args : sends a message to the player if the player has entered in more than 1 argument
+
+# not-enough-args : sends a message to the player if the player has entered in less than 1 argument
+
+# invalid-arg : sends a message to the player if the player has entered an invalid argument in "/pingtl", %arg% is a variable, it will be replaced with what ever the player has entered in
+
+# no-permission : sends a message to the player if the player that is doing '/pingtl reload' does not have permission to preform the command
+
+# config-reloaded : sends a message to the console when the config.yml file has been reloaded

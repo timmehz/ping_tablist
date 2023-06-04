@@ -1,10 +1,17 @@
 package com.diabloiiiros.PingTabList;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class PingOnTabListRunTask extends BukkitRunnable {
+    /*
+        ** Do NOT Delete this comment, you have to include this notice in all files **
+        Copyright (c) diabloIIIROS / timmehz 2023
+        All original code is under copyright under diabloIIIROS / timmehz
+        For more information visit: https://github.com/timmehz/ping_tablist/blob/main/README.md section License
+    */
     private final Main pl;
     public PingOnTabListRunTask(Main pl) { this.pl = pl; }
     @Override
@@ -35,7 +42,7 @@ public class PingOnTabListRunTask extends BukkitRunnable {
                     players.setPlayerListName(formattedPing + ChatColor.RESET + " " + name + ChatColor.RESET);
                 }
             } else {
-                pl.console.severe("Invalid value for 'ping-position' in config.yml");
+                Bukkit.getLogger().severe(pl.getConfig().getString("ping-position-error", "Invalid value for 'ping-position' in config.yml"));
             }
         }
     }
