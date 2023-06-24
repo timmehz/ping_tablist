@@ -1,6 +1,8 @@
 fully-loaded-message: 'Ping Tab List has been fully loaded!'
 update-delay: 5
 show-display-name: false
+restrict-ping-by-perm: false
+spaces: " "
 show-ping-brackets: true
 brackets-left: '&7['
 brackets-right: '&7]'
@@ -15,7 +17,7 @@ to-many-args: '&cTo many arguments has been entered'
 not-enough-args: '&cNot enough arguments has been entered'
 invalid-arg: '&cinvalid argument : %arg%'
 no-permission: '&cYou do not have permission to use this command.'
-config-reloaded: '&aconfig.yml have been reloaded'
+config-reloaded: '&aconfig.yml has been reloaded'
 
 # SUPPORT:
   # Discord: https://discord.gg/Em9EwyKxzq
@@ -28,6 +30,13 @@ config-reloaded: '&aconfig.yml have been reloaded'
   #  - if true : the plugin will use the username that you would see in chat or/and above your minecraft character model
   #  - if false : the plugin will use the username of your minecraft account (this is recommended option)
 # }
+
+# restrict-ping-by-perm : {
+  #  - if true : you have to give permission to the players you want to have access to the ping in tab list, for example: you can have 10 players with ping in tab list and the rest does not have ping in tab list
+  #  - if false : everyone in the tab list has their ping shown; no permission needed (this is how v1.0 - v1.3 worked)
+# }
+
+# spaces : number of spaces that gets added before it shows the ping in the tab list
 
 # show-ping-brackets : {
   #  - if true : the plugin would enable the showing of what ever is in these values of 'brackets-left' , 'brackets-right'
@@ -49,8 +58,32 @@ config-reloaded: '&aconfig.yml have been reloaded'
   #  - maximum number for red ping is <max number for Minecraft>
 # }
 
-# Get Minecraft color codes: https://htmlcolorcodes.com/minecraft-color-codes/
-# green-color-ping , yellow-color-ping , red-color-ping  colors list, ONLY supports 1 color :
+# Minecraft color codes : {
+  # &0  - Black
+  # &1  - Dark Blue
+  # &2  - Dark Green
+  # &3  - Dark Aqua
+  # &4  - Dark Red
+  # &5  - Dark Purple
+  # &6  - Gold
+  # &7  - Gray
+  # &8  - Dark Gray
+  # &9  - Blue
+  # &a  - Green
+  # &b  - Aqua
+  # &c  - Red
+  # &d  - Light Purple
+  # &e  - Yellow
+  # &f  - White
+  # &k  - Obfuscated
+  # &l  - Bold
+  # &m  - Strikethrough
+  # &n  - Underline
+  # &o  - Italic
+  # &r  - Reset  (makes the text set to default - white and no formatting)
+# }
+
+# green-color-ping , yellow-color-ping , red-color-ping  colors list, ONLY supports 1 color : {
   # RED
   # RESET
   # GREEN
@@ -73,6 +106,7 @@ config-reloaded: '&aconfig.yml have been reloaded'
   # STRIKETHROUGH
   # UNDERLINE
   # WHITE
+# }
 
 # to-many-args : sends a message to the player if the player has entered in more than 1 argument
 

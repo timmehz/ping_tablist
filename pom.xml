@@ -6,7 +6,7 @@
 
     <groupId>com.diabloiiiros</groupId>
     <artifactId>ping_tablist</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
     <packaging>jar</packaging>
 
     <name>ping_tablist</name>
@@ -39,11 +39,6 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <artifactSet>
-                                <includes>
-                                    <include>*:*</include>
-                                </includes>
-                            </artifactSet>
                         </configuration>
                     </execution>
                 </executions>

@@ -6,9 +6,13 @@ import java.util.Objects;
 
 public final class Main extends JavaPlugin {
     /*
-        ** Do NOT Delete this comment, you have to include this notice in all files **
-        Copyright (c) diabloIIIROS / timmehz 2023
-        All original code is under copyright under diabloIIIROS / timmehz
+        ** Do NOT Delete this comment multiline **
+        Copyright (c) :
+            - diabloIIIROS        - Spigot
+            - Diablo3ros1         - Minecraft
+            - diabloiiiros        - Discord
+            - timmehz             - GitHub
+        2023
         For more information visit: https://github.com/timmehz/ping_tablist/blob/main/README.md section License
     */
     @Override
